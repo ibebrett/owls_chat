@@ -30,7 +30,7 @@ class Server:
 
     async def get_line(self, reader) -> str:
         b = (await reader.readline())
-        return b.decode('utf-8',codec_errors='replace')
+        return b.decode('utf-8', errors='replace')
         
 
     async def write_line(self, writer, line: str):
